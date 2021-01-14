@@ -14,7 +14,7 @@ body {
 }
 
 .formName{
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .title{
@@ -45,7 +45,7 @@ body {
 .allButton{
   display: flex;
   margin-left: 40px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .topButton{
@@ -83,4 +83,18 @@ body {
    color: white;
   font-family: Oxygen;
   font-size: 15px;
+}
+
+.search{
+  width: 400px;
+  height: 50px;
+  padding: 20px 20px;
+  margin-left: 170px;
+  margin-top: 30px;
+  background: #ff7ca8;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 15px;
+  outline: none;
+  color: white;
+  font-family: Oxygen
 }

@@ -2,8 +2,8 @@ import React from 'react';
 
 const StatusBar = ({setStatus}) => {
 
-    const statusHandler = (e) => {
-        setStatus(e.target.value)
+    const statusHandler = (event) => {
+        setStatus(event.target.value)
     };
 
     return (

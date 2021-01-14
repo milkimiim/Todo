@@ -1,13 +1,14 @@
 import React, { useState , useEffect } from 'react'
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
-import StatusBar from "./components/Statusbar";
+import Search from "./components/Search";
 
 function App()  {
     const [inputText,setInputText] = useState('');
     const [todos, setTodos] = useState([]);
     const [status, setStatus] = useState('all')
     const [ changedTodos, setChangedTodos] = useState([]);
+    const [ search , setSearch ] = useState('')
 
     useEffect(()=>{
         getTodos()
@@ -16,7 +17,7 @@ function App()  {
     useEffect(() => {
         filterTodos();
         saveTodos();
-    },[status,todos,changedTodos]);
+    },[status,todos]);
 
     const filterTodos = () => {
         switch ( status ) {
@@ -47,9 +48,9 @@ function App()  {
   return (
     <div className="App">
         <h1 className='title'> Список Проектов </h1>
-        <StatusBar setStatus={setStatus}/>
+        <Search setSearch={setSearch} search={search} setStatus={setStatus}/>
         <Form todos={todos} setTodos={setTodos} setInputText={setInputText} inputText={inputText}/>
-        <TodoList changedTodos={changedTodos} todos={todos} setTodos={setTodos}/>
+        <TodoList changedTodos={changedTodos} todos={todos} setTodos={setTodos} search={search}/>
     </div>
   );
 }
